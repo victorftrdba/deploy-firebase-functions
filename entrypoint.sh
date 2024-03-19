@@ -3,6 +3,10 @@
 cd /github/workspace/backend; npm install;
 cd /github/workspace;
 
+mkdir /github/workspace/config/pruvo-test-v2-creds.json;
+echo ${FIRESTORE_CERT} >> /github/workspace/config/pruvo-test-v2-creds.json;
+cat /github/workspace/config/pruvo-test-v2-creds.json;
+
 if [ -z "${FIREBASE_TOKEN}" ]; then
     echo "FIREBASE_TOKEN is missing"
     exit 1
