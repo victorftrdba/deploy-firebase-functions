@@ -19,9 +19,10 @@ echo MEILISEARCH_UUID="${MEILISEARCH_UUID}" >> /github/workspace/.env;
 echo REDIRECT_URL_BROWSER="${REDIRECT_URL_BROWSER}" >> /github/workspace/.env;
 echo REDIRECT_URL_BROWSER_2="${REDIRECT_URL_BROWSER_2}" >> /github/workspace/.env;
 echo TASKMIDDLEWARE_URL="${TASKMIDDLEWARE_URL}" >> /github/workspace/.env;
-echo FIRESTORE_CERT="${FIRESTORE_CERT}" >> /github/workspace/.env;
+echo FIRESTORE_CERT=${FIRESTORE_CERT} >> /github/workspace/.env;
 echo FIREBASE_PROJECT="${FIREBASE_PROJECT}" >> /github/workspace/.env;
 echo ENVIRONMENT="${ENVIRONMENT}" >> /github/workspace/.env;
+cat /github/workspace/.env;
 
 if [ -z "${FIREBASE_TOKEN}" ]; then
     echo "FIREBASE_TOKEN is missing"
