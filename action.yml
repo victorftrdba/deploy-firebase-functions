@@ -1,6 +1,6 @@
-name: 'Deploy to Firebase Cloud Functions node 18+'
-author: 'amonc <amonchowdhury8@gmail.com>'
-description: 'A GitHub Action to deploy to Firebase Cloud Functions on Node 18+'
+name: 'Deploy to Firebase Cloud Functions for Pruvo Backend'
+author: 'victorftrdba <victornogu80@gmail.com>'
+description: 'A GitHub Action to deploy to Firebase Cloud Functions on Pruvo Backend'
 runs:
   using: 'docker'
   image: 'Dockerfile'
