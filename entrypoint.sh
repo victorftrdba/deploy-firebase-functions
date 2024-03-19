@@ -3,6 +3,28 @@
 cd /github/workspace/backend; npm install;
 cd /github/workspace;
 
+sudo touch /github/workspace/.env;
+echo FIREBASE_TOKEN=${FIREBASE_TOKEN_DEV} | sudo tee -a /github/workspace/.env;
+echo GOOGLE_APPLICATION_CREDENTIALS=${GOOGLE_APPLICATION_CREDENTIALS_DEV} | sudo tee -a /github/workspace/.env;
+echo CLIENT_ID=${CLIENT_ID_DEV} | sudo tee -a /github/workspace/.env;
+echo CLIENT_SECRET=${CLIENT_SECRET_DEV} | sudo tee -a /github/workspace/.env;
+echo REDIRECT_URL=${REDIRECT_URL_DEV} | sudo tee -a /github/workspace/.env;
+echo REDIRECT_URL_2=${REDIRECT_URL_2_DEV} | sudo tee -a /github/workspace/.env;
+echo ENDPOINT=${ENDPOINT_DEV} | sudo tee -a /github/workspace/.env;
+echo TOPIC_NAME=${TOPIC_NAME_DEV} | sudo tee -a /github/workspace/.env;
+echo SUBSCRIPTION_NAME=${SUBSCRIPTION_NAME_DEV} | sudo tee -a /github/workspace/.env;
+echo MEILISEARCH_URL=${MEILISEARCH_URL_DEV} | sudo tee -a /github/workspace/.env;
+echo MEILISEARCH_KEY=${MEILISEARCH_KEY_DEV} | sudo tee -a /github/workspace/.env;
+echo MEILISEARCH_API_KEY=${MEILISEARCH_API_KEY_DEV} | sudo tee -a /github/workspace/.env;
+echo MEILISEARCH_UUID=${MEILISEARCH_UUID_DEV} | sudo tee -a /github/workspace/.env;
+echo REDIRECT_URL_BROWSER=${REDIRECT_URL_BROWSER_DEV} | sudo tee -a /github/workspace/.env;
+echo REDIRECT_URL_BROWSER_2=${REDIRECT_URL_BROWSER_2_DEV} | sudo tee -a /github/workspace/.env;
+echo TASKMIDDLEWARE_URL=${TASKMIDDLEWARE_URL_DEV} | sudo tee -a /github/workspace/.env;
+echo FIRESTORE_CERT=${FIRESTORE_CERT_DEV} | sudo tee -a /github/workspace/.env;
+echo FIREBASE_PROJECT=${FIREBASE_PROJECT} | sudo tee -a /github/workspace/.env;
+echo ENVIRONMENT=${ENVIRONMENT} | sudo tee -a /github/workspace/.env;
+cat /github/workspace/.env;
+
 if [ -z "${FIREBASE_TOKEN}" ]; then
     echo "FIREBASE_TOKEN is missing"
     exit 1
