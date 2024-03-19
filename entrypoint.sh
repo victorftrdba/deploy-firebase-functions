@@ -3,7 +3,6 @@
 cd /github/workspace/backend; npm install;
 cd /github/workspace;
 touch /github/workspace/backend/.env;
-echo FIREBASE_TOKEN="${FIREBASE_TOKEN}" >> /github/workspace/backend/.env;
 echo GOOGLE_APPLICATION_CREDENTIALS="${GOOGLE_APPLICATION_CREDENTIALS}" >> /github/workspace/backend/.env;
 echo CLIENT_ID="${CLIENT_ID}" >> /github/workspace/backend/.env;
 echo CLIENT_SECRET="${CLIENT_SECRET}" >> /github/workspace/backend/.env;
@@ -20,7 +19,6 @@ echo REDIRECT_URL_BROWSER="${REDIRECT_URL_BROWSER}" >> /github/workspace/backend
 echo REDIRECT_URL_BROWSER_2="${REDIRECT_URL_BROWSER_2}" >> /github/workspace/backend/.env;
 echo TASKMIDDLEWARE_URL="${TASKMIDDLEWARE_URL}" >> /github/workspace/backend/.env;
 echo FIRESTORE_CERT="${FIRESTORE_CERT}" >> /github/workspace/backend/.env;
-echo FIREBASE_PROJECT="${FIREBASE_PROJECT}" >> /github/workspace/backend/.env;
 echo ENVIRONMENT="${ENVIRONMENT}" >> /github/workspace/backend/.env;
 cat /github/workspace/backend/.env;
 
