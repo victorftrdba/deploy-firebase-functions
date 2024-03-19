@@ -1,27 +1,16 @@
 #!/bin/bash
 
-cd applications; npm install; npm run build
-cd ..
-cd auth; npm install; npm run build
-cd ..
-cd backend; npm install; npm run build
-cd ..
-cd cancel-application; npm install; npm run build
-cd ..
-cd classroom-roster-change; npm install; npm run build
-cd ..
-cd competency-matrices; npm install; npm run build
-cd ..
-cd create-application; npm install; npm run build
-cd ..
-cd jobs; npm install; npm run build
-cd ..
-cd pubsub; npm install; npm run build
-cd ..
-cd tasks; npm install; npm run build
-cd ..
-cd users; npm install; npm run build
-cd ..
+cd applications; npm install; npm run build; cd /github/workspace
+cd auth; npm install; npm run build; cd /github/workspace
+cd backend; npm install; npm run build; cd /github/workspace
+cd cancel-application; npm install; npm run build; cd /github/workspace
+cd classroom-roster-change; npm install; npm run build; cd /github/workspace
+cd competency-matrices; npm install; npm run build; cd /github/workspace
+cd create-application; npm install; npm run build; cd /github/workspace
+cd jobs; npm install; npm run build; cd /github/workspace
+cd pubsub; npm install; npm run build; cd /github/workspace
+cd tasks; npm install; npm run build; cd /github/workspace
+cd users; npm install; npm run build; cd /github/workspace
 
 if [ -z "${FIREBASE_TOKEN}" ]; then
     echo "FIREBASE_TOKEN is missing"
