@@ -19,6 +19,7 @@ echo TASKMIDDLEWARE_URL="${TASKMIDDLEWARE_URL}" >> /github/workspace/backend/.en
 echo FIRESTORE_CERT="${FIRESTORE_CERT}" >> /github/workspace/backend/.env;
 echo ENVIRONMENT="${ENVIRONMENT}" >> /github/workspace/backend/.env;
 cat /github/workspace/backend/.env;
+cd /github/workspace;
 
 if [ -z "${FIREBASE_TOKEN}" ]; then
     echo "FIREBASE_TOKEN is missing"
@@ -33,4 +34,5 @@ fi
 firebase deploy \
     -m "${GITHUB_REF} (${GITHUB_SHA})" \
     --project ${FIREBASE_PROJECT} \
-    --only functions:groupA,groupB --force
+    --only functions \
+    --force
