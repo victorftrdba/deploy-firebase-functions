@@ -33,5 +33,5 @@ fi
 firebase deploy \
     -m "${GITHUB_REF} (${GITHUB_SHA})" \
     --project ${FIREBASE_PROJECT} \
-    --only "functions:groupA,groupB" \
+    --only "functions:groupA,functions:groupB" \
     --force
