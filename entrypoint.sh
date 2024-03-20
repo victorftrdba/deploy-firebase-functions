@@ -58,6 +58,7 @@ do
     echo FIRESTORE_CERT="${FIRESTORE_CERT}" >> .env;
     echo PUBSUB_CERT="${PUBSUB_CERT}" >> .env;
     echo ENVIRONMENT="${ENVIRONMENT}" >> .env;
+    echo STORAGE_BUCKET="${STORAGE_BUCKET}" >> .env;
 
     # Exibe o conteúdo do .env
     cat .env;
