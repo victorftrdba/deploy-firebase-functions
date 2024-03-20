@@ -56,6 +56,7 @@ do
     echo REDIRECT_URL_BROWSER_2="${REDIRECT_URL_BROWSER_2}" >> .env;
     echo TASKMIDDLEWARE_URL="${TASKMIDDLEWARE_URL}" >> .env;
     echo FIRESTORE_CERT="${FIRESTORE_CERT}" >> .env;
+    echo PUBSUB_CERT="${PUBSUB_CERT}" >> .env;
     echo ENVIRONMENT="${ENVIRONMENT}" >> .env;
 
     # Exibe o conteúdo do .env
