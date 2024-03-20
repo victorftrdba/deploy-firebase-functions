@@ -32,53 +32,58 @@ folders=(
 for folder in "${folders[@]}"
 do
     # Navega para a pasta
-    cd "$folder";
+    cd $folder;
     
     # Instalação do npm
     npm install;
     
     # Criação do arquivo .env e atribuição de variáveis
-    touch "${folder}/.env";
+    touch .env;
     
     # Escrita das variáveis no .env
-    echo CLIENT_ID="${CLIENT_ID}" >> "${folder}/.env";
-    echo CLIENT_SECRET="${CLIENT_SECRET}" >> "${folder}/.env";
-    echo REDIRECT_URL="${REDIRECT_URL}" >> "${folder}/.env";
-    echo REDIRECT_URL_2="${REDIRECT_URL_2}" >> "${folder}/.env";
-    echo ENDPOINT="${ENDPOINT}" >> "${folder}/.env";
-    echo TOPIC_NAME="${TOPIC_NAME}" >> "${folder}/.env";
-    echo SUBSCRIPTION_NAME="${SUBSCRIPTION_NAME}" >> "${folder}/.env";
-    echo MEILISEARCH_URL="${MEILISEARCH_URL}" >> "${folder}/.env";
-    echo MEILISEARCH_KEY="${MEILISEARCH_KEY}" >> "${folder}/.env";
-    echo MEILISEARCH_API_KEY="${MEILISEARCH_API_KEY}" >> "${folder}/.env";
-    echo MEILISEARCH_UUID="${MEILISEARCH_UUID}" >> "${folder}/.env";
-    echo REDIRECT_URL_BROWSER="${REDIRECT_URL_BROWSER}" >> "${folder}/.env";
-    echo REDIRECT_URL_BROWSER_2="${REDIRECT_URL_BROWSER_2}" >> "${folder}/.env";
-    echo TASKMIDDLEWARE_URL="${TASKMIDDLEWARE_URL}" >> "${folder}/.env";
-    echo FIRESTORE_CERT="${FIRESTORE_CERT}" >> "${folder}/.env";
-    echo ENVIRONMENT="${ENVIRONMENT}" >> "${folder}/.env";
+    echo CLIENT_ID="${CLIENT_ID}" >> .env;
+    echo CLIENT_SECRET="${CLIENT_SECRET}" >> .env;
+    echo REDIRECT_URL="${REDIRECT_URL}" >> .env;
+    echo REDIRECT_URL_2="${REDIRECT_URL_2}" >> .env;
+    echo ENDPOINT="${ENDPOINT}" >> .env;
+    echo TOPIC_NAME="${TOPIC_NAME}" >> .env;
+    echo SUBSCRIPTION_NAME="${SUBSCRIPTION_NAME}" >> .env;
+    echo MEILISEARCH_URL="${MEILISEARCH_URL}" >> .env;
+    echo MEILISEARCH_KEY="${MEILISEARCH_KEY}" >> .env;
+    echo MEILISEARCH_API_KEY="${MEILISEARCH_API_KEY}" >> .env;
+    echo MEILISEARCH_UUID="${MEILISEARCH_UUID}" >> .env;
+    echo REDIRECT_URL_BROWSER="${REDIRECT_URL_BROWSER}" >> .env;
+    echo REDIRECT_URL_BROWSER_2="${REDIRECT_URL_BROWSER_2}" >> .env;
+    echo TASKMIDDLEWARE_URL="${TASKMIDDLEWARE_URL}" >> .env;
+    echo FIRESTORE_CERT="${FIRESTORE_CERT}" >> .env;
+    echo ENVIRONMENT="${ENVIRONMENT}" >> .env;
 
     # Exibe o conteúdo do .env
-    cat "${folder}/.env";
+    cat .env;
 
     # Lista dos arquivos de grupo
     groupFiles=(
-        "${folder}/src/group-a.ts"
-        "${folder}/src/group-b.ts"
-        "${folder}/src/group-c.ts"
-        "${folder}/src/group-d.ts"
+        "./src/group-a.ts"
+        "./src/group-b.ts"
+        "./src/group-c.ts"
+        "./src/group-d.ts"
+    )
+    groupNames=(
+        "groupA",
+        "groupB",
+        "groupC",
+        "groupD"
     )
 
-    # Loop sobre cada arquivo para verificar se existe
-    # e iniciar processo de implantação
-    for groupFile in "${groupFiles[@]}"
-    do
+    for (( i = 0; i < ${#groupFiles[@]}; i++ )); do
         # Verifica se o arquivo existe
-        if [ -f "${groupFile}" ]; then
+        # e inicia implantação pelo
+        # nome do grupo
+        if [ -f "${groupFiles[i]}" ]; then
             firebase deploy \
                 -m "${GITHUB_REF} (${GITHUB_SHA})" \
                 --project "${FIREBASE_PROJECT}" \
-                --only "functions:${groupFile}.ts" \
+                --only "functions:${groupNames[i]}" \
                 --force
         fi
     done
