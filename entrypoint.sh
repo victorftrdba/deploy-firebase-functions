@@ -63,16 +63,34 @@ do
 
     # Lista dos arquivos de grupo
     groupFiles=(
-        "./src/group-a.ts"
-        "./src/group-b.ts"
-        "./src/group-c.ts"
-        "./src/group-d.ts"
+        "./src/group-applications-a.ts"
+        "./src/group-auth-a.ts"
+        "./src/group-backend-a.ts"
+        "./src/group-backend-b.ts"
+        "./src/group-cancel-application-a.ts"
+        "./src/group-classroom-roster-change-a.ts"
+        "./src/group-competency-matrices-a.ts"
+        "./src/group-create-application-a.ts"
+        "./src/group-jobs-a.ts"
+        "./src/group-pubsub-a.ts"
+        "./src/group-sync-meilisearch-a.ts"
+        "./src/group-tasks-a.ts"
+        "./src/group-users-a.ts"
     )
     groupNames=(
-        "groupA",
-        "groupB",
-        "groupC",
-        "groupD"
+        "groupApplicationsA"
+        "groupAuthA"
+        "groupBackendA"
+        "groupBackendB"
+        "groupCancelApplicationA"
+        "groupClassroomRosterChangeA"
+        "groupCompetencyMatricesA"
+        "groupCreateApplicationA"
+        "groupJobsA"
+        "groupPubsubA"
+        "groupSyncMeilisearchA"
+        "groupTasksA"
+        "groupUsersA"
     )
 
     for (( i = 0; i < ${#groupFiles[@]}; i++ )); do
