@@ -3,7 +3,6 @@
 cd /github/workspace/backend; npm install;
 cd /github/workspace;
 touch /github/workspace/backend/.env;
-echo GOOGLE_APPLICATION_CREDENTIALS="${GOOGLE_APPLICATION_CREDENTIALS}" >> /github/workspace/backend/.env;
 echo CLIENT_ID="${CLIENT_ID}" >> /github/workspace/backend/.env;
 echo CLIENT_SECRET="${CLIENT_SECRET}" >> /github/workspace/backend/.env;
 echo REDIRECT_URL="${REDIRECT_URL}" >> /github/workspace/backend/.env;
