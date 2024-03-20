@@ -63,10 +63,10 @@ do
 
     # Lista dos arquivos de grupo
     groupFiles=(
-        "group-a.ts"
-        "group-b.ts"
-        "group-c.ts"
-        "group-d.ts"
+        "${folder}/src/group-a.ts"
+        "${folder}/src/group-b.ts"
+        "${folder}/src/group-c.ts"
+        "${folder}/src/group-d.ts"
     )
 
     # Loop sobre cada arquivo para verificar se existe
