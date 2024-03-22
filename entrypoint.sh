@@ -15,7 +15,6 @@ fi
 # Lista das pastas desejadas
 folders=(
     "/github/workspace/applications"
-    "/github/workspace/auth"
     "/github/workspace/backend"
     "/github/workspace/cancel-application"
     "/github/workspace/classroom-roster-change"
@@ -66,7 +65,6 @@ do
     # Lista dos arquivos de grupo
     groupFiles=(
         "./src/group-applications-a.ts"
-        "./src/group-auth-a.ts"
         "./src/group-backend-a.ts"
         "./src/group-backend-b.ts"
         "./src/group-cancel-application-a.ts"
@@ -81,7 +79,6 @@ do
     )
     groupNames=(
         "groupApplicationsA"
-        "groupAuthA"
         "groupBackendA"
         "groupBackendB"
         "groupCancelApplicationA"
