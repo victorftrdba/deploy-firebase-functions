@@ -24,7 +24,6 @@ folders=(
     "/github/workspace/pubsub"
     "/github/workspace/sync-meilisearch"
     "/github/workspace/tasks"
-    "/github/workspace/users"
 )
 
 # Loop sobre cada pasta
@@ -75,7 +74,6 @@ do
         "./src/group-pubsub-a.ts"
         "./src/group-sync-meilisearch-a.ts"
         "./src/group-tasks-a.ts"
-        "./src/group-users-a.ts"
     )
     groupNames=(
         "groupApplicationsA"
@@ -89,7 +87,6 @@ do
         "groupPubsubA"
         "groupSyncMeilisearchA"
         "groupTasksA"
-        "groupUsersA"
     )
 
     for (( i = 0; i < ${#groupFiles[@]}; i++ )); do
